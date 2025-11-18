@@ -1,16 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
-import HomePage from './pages/HomePage.tsx';
-import AboutPage from './pages/AboutPage.tsx';
+import { HomePage } from './pages/HomePage';
 
 function App() {
   return (
-    <Routes>
-      <Route element={<Layout />}>
+    <Layout>
+      <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/about' element={<AboutPage />} />
-      </Route>
-    </Routes>
+      </Routes>
+    </Layout>
   );
 }
 
